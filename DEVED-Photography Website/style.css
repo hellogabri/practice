@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Ruhl";
+  src: url(./fonts/FrankRuhlLibre-Regular.ttf);
+}
+@font-face {
+  font-family: "Ruhl Medium";
+  src: url(./fonts/FrankRuhlLibre-Medium.ttf);
+}
+@font-face {
+  font-family: "GreatVibes";
+  src: url(./fonts/GreatVibes-Regular.ttf);
+}
+
+html {
+  font-size: 62.5%;
+  --h1: 4rem;
+  --h2: 3.6rem;
+  --h3: 3.6rem;
+  --accent: 1.6rem;
+  --text: 2rem;
+  --big-text: 6rem;
+  --main-color: black;
+  --text-color: #787878;
+  --spec-color: #906272;
+  --background-color: #414141;
+}
+
+h1 {
+  font-size: var(--h1);
+  font-family: "GreatVibes", sans-serif;
+}
+h2 {
+  font-size: var(--h2);
+}
+h3 {
+  font-size: var(--h3);
+}
+h4,
+button {
+  font-size: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+p {
+  font-size: var(--text);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Ruhl", sans-serif;
+}
+
+.main-head {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
+  position: relative;
+  z-index: 2;
+}
+nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 10vh;
+  padding: 2rem 0rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.hero {
+  min-height: 90vh;
+  width: 95%;
+  margin: 0 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.hero-introduction {
+  text-align: center;
+  flex: 2 1 30rem;
+}
+
+.hero-introduction p {
+  padding: 5rem 10rem;
+}
+.hero-introduction h2 {
+  padding-top: 3rem;
+}
+
+.hero-introduction a {
+  padding: 2rem 6rem;
+  border: solid 3px black;
+}
+.hero-img {
+  flex: 1 1 30rem;
+  background: linear-gradient(white, rgb(117, 117, 117));
+  position: relative;
+  z-index: 1;
+}
+.hero-elena {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.plant {
+  width: 80%;
+  position: absolute;
+  bottom: 0px;
+  left: -20%;
+  z-index: -1;
+}
+
+.plant2 {
+  left: 30%;
+}
+
+.about {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-text {
+  background: var(--background-color);
+  color: white;
+  flex: 1;
+  padding: 0 10rem 0 10rem;
+}
+
+.about-text h1 {
+  font-size: 5rem;
+}
+.about-text p {
+  color: white;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  font-family: "Ruhl";
+  padding: 3rem 0;
+}
+
+.about-img {
+  flex: 1;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery {
+  display: grid;
+  min-height: 100vh;
+  grid-template-areas:
+    "gallery1 gallery1 gallery2"
+    "gallery3 gallery4 gallery2";
+  position: relative;
+}
+
+.gallery1 {
+  grid-area: gallery1;
+}
+.gallery2 {
+  grid-area: gallery2;
+}
+.gallery3 {
+  grid-area: gallery3;
+}
+.gallery4 {
+  grid-area: gallery4;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.gallery header {
+  background: var(--background-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 2rem 8rem;
+}
+
+.gallery header p {
+  font-size: 1.6rem;
+  color: white;
+  padding: 1rem;
+  line-height: 3rem;
+}
+
+.contact {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-wrapper {
+  flex: 3 1 40rem;
+}
+
+.form-wrapper h2 {
+  font-size: var(--big-text);
+  margin: 5rem 0rem;
+}
+
+.form-wrapper span {
+  color: var(--spec-color);
+  font-size: 10rem;
+}
+
+.form-wrapper label {
+  display: block;
+  font-size: var(--text);
+}
+
+.form-wrapper input {
+  display: block;
+  margin: 3rem 0rem;
+  background: var(--background-color);
+  color: white;
+  font-size: var(--text);
+  padding: 1rem;
+  width: 100%;
+  border: none;
+}
+
+.form-wrapper button {
+  background: var(--spec-color);
+  color: white;
+  border: none;
+  font-size: var(--text);
+  width: 100%;
+  padding: 1rem 8rem;
+}
+
+.form-wrapper button:hover {
+  background: var(--background-color);
+  color: white;
+  border: none;
+}
+
+.contact-img {
+  flex: 1 1 40rem;
+  width: 100%;
+}
+
+footer {
+  padding: 3rem 5%;
+  background: var(--spec-color);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  gap: 3rem;
+}
